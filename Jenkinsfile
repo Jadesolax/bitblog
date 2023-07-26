@@ -6,12 +6,12 @@ pipeline{
            steps{
                 
                sh  """
-                    sudo ssh -i /var/lib/jenkins/jk.pem -t -o StrictHostKeyChecking=no ubuntu@ec2-18-218-127-85.us-east-2.compute.amazonaws.com << EOF
+                    sudo ssh -i /var/lib/jenkins/jk.pem -t -o StrictHostKeyChecking=no ubuntu@ec2-13-40-196-51.eu-west-2.compute.amazonaws.com << EOF
                     cd /var
                     sudo mkdir html
                     sudo chown -R jenkins:jenkins html/
                     cd /var/html
-                    sudo git clone https://github.com/theoafactor/bitblog.git . 
+                    sudo git clone https://github.com/Jadesolax/bitblog.git . 
                     sudo docker build -t bitblog:1 .
                     <<EOF
                     """
