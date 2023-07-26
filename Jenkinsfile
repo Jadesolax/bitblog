@@ -8,6 +8,7 @@ pipeline{
                sh  """
                     sudo ssh -i /var/lib/jenkins/bitblog.pem -t -o StrictHostKeyChecking=no ubuntu@ec2-13-41-157-242.eu-west-2.compute.amazonaws.com << EOF
                     cd /var
+                    sudo rm -rf html
                     sudo mkdir html
                     sudo chown -R jenkins:jenkins html/
                     cd /var/html
