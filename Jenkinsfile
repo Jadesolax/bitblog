@@ -13,8 +13,8 @@ pipeline{
                     sudo chown -R jenkins:jenkins html/
                     cd /var/html
                     sudo git clone https://github.com/Jadesolax/bitblog.git . 
-                    sudo docker build -t bitblog:2 .
-                    sudo docker run -d -p 80:80 bitblog:2
+                    sudo docker build -t bitblog:1 .
+                    sudo docker run -d -p 80:80 bitblog:1
                     <<EOF
                     """
                
